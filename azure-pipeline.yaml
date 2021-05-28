@@ -21,8 +21,8 @@ stages:
       inputs:
         connectionType: 'Azure Resource Manager'
         azureSubscriptionEndpoint: 'Azure'
-        azureResourceGroup: aksselgrig4test
-        kubernetesCluster: aksselgrid4
+        azureResourceGroup: web-monitors-dev-rg
+        kubernetesCluster: acap-monitor-dev-aks
         namespace: '$(namespace)'
         command: login
 
@@ -30,8 +30,8 @@ stages:
       displayName: 'event-hub'
       inputs:
         azureSubscription: Azure
-        azureResourceGroup: aksselgrig4test
-        kubernetesCluster: aksselgrid4
+        azureResourceGroup: web-monitors-dev-rg
+        kubernetesCluster: acap-monitor-dev-aks
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -43,8 +43,8 @@ stages:
       displayName: 'sessions'
       inputs:
         azureSubscription: Azure
-        azureResourceGroup: aksselgrig4test
-        kubernetesCluster: aksselgrid4
+        azureResourceGroup: web-monitors-dev-rg
+        kubernetesCluster: acap-monitor-dev-aks
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -56,8 +56,8 @@ stages:
       displayName: 'session-queuer'
       inputs:
         azureSubscription: Azure
-        azureResourceGroup: aksselgrig4test
-        kubernetesCluster: aksselgrid4
+        azureResourceGroup: web-monitors-dev-rg
+        kubernetesCluster: acap-monitor-dev-aks
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -69,8 +69,8 @@ stages:
       displayName: 'distributor'
       inputs:
         azureSubscription: Azure
-        azureResourceGroup: aksselgrig4test
-        kubernetesCluster: aksselgrid4
+        azureResourceGroup: web-monitors-dev-rg
+        kubernetesCluster: acap-monitor-dev-aks
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -82,8 +82,8 @@ stages:
       displayName: 'router'
       inputs:
         azureSubscription: Azure
-        azureResourceGroup: aksselgrig4test
-        kubernetesCluster: aksselgrid4
+        azureResourceGroup: web-monitors-dev-rg
+        kubernetesCluster: acap-monitor-dev-aks
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -95,8 +95,8 @@ stages:
       displayName: 'chrome'
       inputs:
         azureSubscription: Azure
-        azureResourceGroup: aksselgrig4test
-        kubernetesCluster: aksselgrid4
+        azureResourceGroup: web-monitors-dev-rg
+        kubernetesCluster: acap-monitor-dev-aks
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -108,8 +108,8 @@ stages:
       displayName: 'firefox'
       inputs:
         azureSubscription: Azure
-        azureResourceGroup: aksselgrig4test
-        kubernetesCluster: aksselgrid4
+        azureResourceGroup: web-monitors-dev-rg
+        kubernetesCluster: acap-monitor-dev-aks
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
