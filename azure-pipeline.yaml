@@ -22,7 +22,7 @@ stages:
         connectionType: 'Azure Resource Manager'
         azureSubscriptionEndpoint: 'Azure'
         azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks
+        kubernetesCluster: acap-monitor-dev-aks-new
         namespace: '$(namespace)'
         command: login
 
@@ -31,7 +31,7 @@ stages:
       inputs:
         azureSubscription: Azure
         azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks
+        kubernetesCluster: acap-monitor-dev-aks-new
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -44,7 +44,7 @@ stages:
       inputs:
         azureSubscription: Azure
         azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks
+        kubernetesCluster: acap-monitor-dev-aks-new
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -57,7 +57,7 @@ stages:
       inputs:
         azureSubscription: Azure
         azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks
+        kubernetesCluster: acap-monitor-dev-aks-new
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -70,7 +70,7 @@ stages:
       inputs:
         azureSubscription: Azure
         azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks
+        kubernetesCluster: acap-monitor-dev-aks-new
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -83,7 +83,7 @@ stages:
       inputs:
         azureSubscription: Azure
         azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks
+        kubernetesCluster: acap-monitor-dev-aks-new
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -96,7 +96,7 @@ stages:
       inputs:
         azureSubscription: Azure
         azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks
+        kubernetesCluster: acap-monitor-dev-aks-new
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -109,7 +109,7 @@ stages:
       inputs:
         azureSubscription: Azure
         azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks
+        kubernetesCluster: acap-monitor-dev-aks-new
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
