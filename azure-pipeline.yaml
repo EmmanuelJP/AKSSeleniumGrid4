@@ -20,18 +20,18 @@ stages:
       displayName: 'kubectl login'
       inputs:
         connectionType: 'Azure Resource Manager'
-        azureSubscriptionEndpoint: 'Azure'
-        azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks-new
+        azureSubscriptionEndpoint: '$(azureSubscription)'
+        azureResourceGroup: '$(azureResourceGroup)'
+        kubernetesCluster: '$(kubernetesCluster)'
         namespace: '$(namespace)'
         command: login
 
     - task: HelmDeploy@0
       displayName: 'event-hub'
       inputs:
-        azureSubscription: Azure
-        azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks-new
+        azureSubscription: '$(azureSubscription)'
+        azureResourceGroup: '$(azureResourceGroup)'
+        kubernetesCluster: '$(kubernetesCluster)'
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -42,9 +42,9 @@ stages:
     - task: HelmDeploy@0
       displayName: 'sessions'
       inputs:
-        azureSubscription: Azure
-        azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks-new
+        azureSubscription: '$(azureSubscription)'
+        azureResourceGroup: '$(azureResourceGroup)'
+        kubernetesCluster: '$(kubernetesCluster)'
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -55,9 +55,9 @@ stages:
     - task: HelmDeploy@0
       displayName: 'session-queuer'
       inputs:
-        azureSubscription: Azure
-        azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks-new
+        azureSubscription: '$(azureSubscription)'
+        azureResourceGroup: '$(azureResourceGroup)'
+        kubernetesCluster: '$(kubernetesCluster)'
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -68,9 +68,9 @@ stages:
     - task: HelmDeploy@0
       displayName: 'distributor'
       inputs:
-        azureSubscription: Azure
-        azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks-new
+        azureSubscription: '$(azureSubscription)'
+        azureResourceGroup: '$(azureResourceGroup)'
+        kubernetesCluster: '$(kubernetesCluster)'
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -81,9 +81,9 @@ stages:
     - task: HelmDeploy@0
       displayName: 'router'
       inputs:
-        azureSubscription: Azure
-        azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks-new
+        azureSubscription: '$(azureSubscription)'
+        azureResourceGroup: '$(azureResourceGroup)'
+        kubernetesCluster: '$(kubernetesCluster)'
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -94,9 +94,9 @@ stages:
     - task: HelmDeploy@0
       displayName: 'chrome'
       inputs:
-        azureSubscription: Azure
-        azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks-new
+        azureSubscription: '$(azureSubscription)'
+        azureResourceGroup: '$(azureResourceGroup)'
+        kubernetesCluster: '$(kubernetesCluster)'
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
@@ -107,9 +107,9 @@ stages:
     - task: HelmDeploy@0
       displayName: 'firefox'
       inputs:
-        azureSubscription: Azure
-        azureResourceGroup: web-monitors-dev-rg
-        kubernetesCluster: acap-monitor-dev-aks-new
+        azureSubscription: '$(azureSubscription)'
+        azureResourceGroup: '$(azureResourceGroup)'
+        kubernetesCluster: '$(kubernetesCluster)'
         namespace: '$(namespace)'
         command: upgrade
         chartType: FilePath
